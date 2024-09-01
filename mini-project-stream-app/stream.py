@@ -1,7 +1,7 @@
 import streamlit as st
 import cv2
 import numpy as np
-from ultralytics import YOLO, solutions
+from ultralytics import YOLO
 
 # title of the app
 st.title("Real-time License Plate Detection")
@@ -25,7 +25,7 @@ else:
     # write the properties to the app
     st.write(f"Webcam resolution: {width}x{height} at {fps} FPS")
 
-
+    # placeholder for the frame
     frame_placeholder = st.empty()
 
     while True:
@@ -45,7 +45,6 @@ else:
         # convert the frame to RGB
         frame_rgb = cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB)
         
-        # Update the image in the placeholder
         frame_placeholder.image(frame_rgb, use_column_width=True)
 
         # Stop the webcam feed if the user presses 'q'
