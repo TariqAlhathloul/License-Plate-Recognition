@@ -1,0 +1,14 @@
+description: Ultralytics best model trained on /kaggle/working/data.yaml
+author: Ultralytics
+date: '2024-09-04T08:00:25.747957'
+version: 8.2.84
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: License_Plate
